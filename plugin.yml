@@ -1,0 +1,44 @@
+name: MineWorld
+main: lakwsh\MineWorld\MineWorld
+version: 47
+api: [2.0.0, 3.0.0-ALPHA1, 3.0.0-ALPHA2, 3.0.0-ALPHA3, 3.0.0-ALPHA4]
+load: STARTUP
+author: lakwsh
+website: https://lakwsh.net
+
+commands:
+ god:
+  usage: "/god"
+  permission: MineWorld.god
+  description: "快速开关Op无敌功能"
+ disable:
+  usage: "/disable <Plugin Name>"
+  permission: MineWorld.disable
+  description: "单独关闭某个插件"
+ stopserver:
+  usage: "/stopserver <time>"
+  permission: MineWorld.stopserver
+  description: "倒计时关闭服务器"
+ banitem:
+  usage: "/banitem"
+  permission: MineWorld.banitem
+  description: "禁止使用物品"
+ bmsg:
+  usage: "/bmsg <fadein> <staytime> <fadeout> <title> (<subtitle>)"
+  permission: MineWorld.bmsg
+  description: "向全服玩家发送大标题信息"
+
+permissions:
+ MineWorld:
+  default: false
+  children:
+   MineWorld.god:
+    default: op
+   MineWorld.disable:
+    default: op
+   MineWorld.stopserver:
+    default: op
+   MineWorld.banitem:
+    default: op
+   MineWorld.bmsg:
+    default: op
